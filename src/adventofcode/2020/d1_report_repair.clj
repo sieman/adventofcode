@@ -1,6 +1,9 @@
 (ns adventofcode.2020.d1-report-repair
   (:require [clojure.java.io :as io]))
 
+;; this solution is copy right of Lambda Island
+;; https://www.youtube.com/watch?v=9ITiZ88sljA
+
 (def input-sample [1721 979 366 299 675 1456])
 
 (def input (map #(Long/parseLong %)
@@ -19,6 +22,7 @@
        z input
        :when (= 2020 (+ x y z))]
    (* x y z)))
+
 ;; => #{241861950}
 ;; => #{131248694}
 
